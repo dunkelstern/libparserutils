@@ -476,7 +476,7 @@ parserutils_error charset_utf16_codec_read_char(charset_utf16_codec *c,
 		 * We're processing client-provided data, so let's
 		 * be paranoid about its validity. */
 		error = parserutils_charset_utf16_next_paranoid(
-				*source, *sourcelen, 0, &nextchar);
+				*source, (uint32_t)*sourcelen, 0, &nextchar);
 		if (error != PARSERUTILS_OK) {
 			if (error == PARSERUTILS_NEEDDATA) {
 				/* Need more data to be sure */

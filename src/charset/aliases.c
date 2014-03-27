@@ -66,7 +66,7 @@ static int parserutils_charset_alias_match(const void *a, const void *b)
           key_left--; s_key++;
         }
         
-        return key_left - alias_left;
+        return (int)(key_left - alias_left);
 }
 
 /**

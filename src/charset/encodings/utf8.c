@@ -123,8 +123,8 @@ parserutils_error parserutils_charset_utf8_char_byte_length(const uint8_t *s,
  *                 previous legal character
  * \return PARSERUTILS_OK on success, appropriate error otherwise
  */
-parserutils_error parserutils_charset_utf8_prev(const uint8_t *s, uint32_t off,
-		uint32_t *prevoff)
+parserutils_error parserutils_charset_utf8_prev(const uint8_t *s, off_t off,
+		off_t *prevoff)
 {
 	parserutils_error error;
 
@@ -143,8 +143,8 @@ parserutils_error parserutils_charset_utf8_prev(const uint8_t *s, uint32_t off,
  *                 next legal character
  * \return PARSERUTILS_OK on success, appropriate error otherwise
  */
-parserutils_error parserutils_charset_utf8_next(const uint8_t *s, uint32_t len,
-		uint32_t off, uint32_t *nextoff)
+parserutils_error parserutils_charset_utf8_next(const uint8_t *s, size_t len,
+		off_t off, off_t *nextoff)
 {
 	parserutils_error error;
 
@@ -164,7 +164,7 @@ parserutils_error parserutils_charset_utf8_next(const uint8_t *s, uint32_t len,
  * \return PARSERUTILS_OK on success, appropriate error otherwise
  */
 parserutils_error parserutils_charset_utf8_next_paranoid(const uint8_t *s, 
-		uint32_t len, uint32_t off, uint32_t *nextoff)
+		size_t len, off_t off, off_t *nextoff)
 {
 	parserutils_error error;
 
